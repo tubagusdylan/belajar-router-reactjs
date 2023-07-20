@@ -3,6 +3,7 @@ import { Home } from "./Pages/Home";
 import { About } from "./Pages/About";
 import { Blog } from "./Pages/Blog";
 import "./app.css";
+import { AboutDetail } from "./Pages/AboutDetail";
 
 function App() {
   return (
@@ -20,7 +21,10 @@ function App() {
       </nav>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
+        <Route path="/about" element={<About />}>
+          <Route path="detail" element={<AboutDetail />} />
+        </Route>
+        <Route path="about/detail_2" element={<AboutDetail />} />
         <Route path="/blog" element={<Blog />} />
       </Routes>
     </>
